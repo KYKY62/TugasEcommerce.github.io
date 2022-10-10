@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+
+    <title>Modul 4</title>
+</head>
+
+<body id="modul1">
+    <section id="list" class="position-absolute top-50 start-50 translate-middle">
+        <div class="container p-5">
+            <div class="row col-sm-12 text-center tugasmodul1 ">
+                <h1>Soal dan Jawaban Modul 4</h1>
+                <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#modal1">
+                    Soal Nomor 1
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal2">
+                    Soal Nomor 2
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal3">
+                    Soal Nomor 3
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal4">
+                    Soal Nomor 4
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal5">
+                    Soal Nomor 5
+                </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal6">
+                    Soal Nomor 6
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="false">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal1Label">1. Gambarkan metode Enkripsi dan Certification
+                        Authority/Digital Signature
+                        berikan penjelasan!</h5>
+                </div>
+                <div class="modal-body">
+                    <img src="../assets/enkripsi.png" alt="Gambar Enkripsi"><br>
+                    Gambar Enkripsi <br>
+                    Kriptografi asimetris atau juga dikenal sebagai kriptografi kunci publik, menggunakan duakunci yang
+                    berbeda: satu publik dan satu privat yang saling terkait secara matematis. Kuncipublik bisa dibagi
+                    dengan semua orang, sedangkan kunci privat harus dirahasiakan
+                    <br><br>
+                    <img src="../assets/authory.png" alt="Gambar Certificate authory" style="height: 300px;"><br>
+                    Gambar Certificate authory <br>
+                    Certificate Authority adalah entitas terpercaya yang menerbitkan sebuah dokumenelektronik yang
+                    memverifikasi suatu identitas dari suatu entitas di internet, dokumenelektronik yang dimaksud adalah
+                    Digital Certificate.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Mengerti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal2Label">2. Gambarkan proses Enkripsi RSA berikan contoh dan
+                        penjelasannya!
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    Contoh Penghitungan RSA <br>
+                    Misalnya kita mau mengenkripsi kata “SECRET” dengan RSA, lalu kita dekripsi kembali ke
+                    dalam plaintext. Karena p dan q berjumlah minimal 100 digit atau lebih,nilai d dan e bisa berjumlah
+                    sama
+                    dengan 100 digit dan nilai N akan berjumlah 200 digit.Untuk itu di contoh pemakaian berikut, kita
+                    akan
+                    memakai angka-angka yang kecil agar mudah dalam penghitungan. Cara pengerjaannya adalah : <br>
+                    <ol>
+                        <li>Kita pilih p= 3 dan q= 5</li>
+                        <li>Hitung N=pq= 3*5 = 15</li>
+                        <li>Nilai e harus merupakan bilangan prima yang lebih
+                            besar dan relatif dekat dengan(p-1)(q-1) = (2)(4) = 8, sehingga kita pilih e= 11. Angka 11
+                            adalah
+                            bilangan prima terdekat dan lebih besar daripada 8</li>
+                        <li>Nilai d harus dipilih sehingga (ed- 1)(p-1)(q-1)adalah sebuah integer. Lalu nilai(11d - 1) /
+                            [(2)(4)]
+                            = (11d - 1) / 8 juga merupakan integer. Setelah melalui proses penghitungan, salah satu
+                            nilai yang
+                            mungkin adalah d = 3.</li>
+                        <li>Lalu kita masukkan kata yang akan dienkripsi, “SECRET”. Kita akan
+                            mengkonversi
+                            string ini kerepresentasi desimal menggunakan nilai karakter ASCII, yang akan menghasilkan
+                            nilai
+                            ASCII 83 69 67 82 69 84</li>
+                        <li>Pengirim akan mengenkripsi setiap digit angka pada saat yang
+                            bersamaan menggunakan nilai kunci publik (e,n) = (11,15). Lalu setiap karakter cipher text
+                            akan
+                            masuk ke
+                            persamaan Ci = Midmod 15 Yang akan menghasilkan nilai digit masukan adalah 0x836967826984
+                            yang
+                            akan dikirim sebagai 0x2c696d286924</li>
+                        <li>Penerima akan mendekripsi setiap digit angka menggunakan nilai
+                            kunci privat(d,n) = (3, 15). Lalu, setiap karakter plaintext akan masuk persamaan Mi =
+                            Ci3mod
+                            15 String masukan yang bernilai 0x2c696d286924, akan dikonversi kembali menjadi
+                            0x836967826984, dan
+                            akhirnya angka-angka tersebut akan diubah kembalimenjadi bentuk stringplaintextyang bernilai
+                            “SECRET”</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Mengerti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal3Label">3. Untuk melindungi kegiatan bisnis online atau eCommerce
+                        pelaku yang terlibat
+                        didalam mendapat perlindungan dari pemerintah dengan terbitnya UU TEI,
+                        cobalah anda cari UU TEI yang terkait dengan kegiatan eCommerce!</h5>
+                </div>
+                <div class="modal-body">
+                    Undang-Undang No 7 Tahun 2014 Tentang Perdagangan (UU Perdagangan) dan UUNo 8 tahun 1999 tentang
+                    Perlindungan Konsumen (UU Perlindungan Konsumen) merupakan acuan bagi setiap pelaku usaha dalam
+                    melakukan transaksi perdagangan,baik perdagangan konvensional maupun perdagangan melalui online atau
+                    e-commerce.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Mengerti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal4Label">4. Selain kejahatan dalam dunia maya yang sudah dijelaskan
+                        sebelumnya, cyber
+                        crime apa saja yang bisa terjadi atau kemungkinan terjadi, jelaskan dan
+                        bagaimana penanggunalangannya,
+                        ini!
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    Pengertian cyber crime biasa diartikan sebagai tindak kejahatan di ranah dunia maya yang
+                    memanfaatkan teknologi komputer dan jaringan internet sebagai sasaran. <br>
+                    Contoh Kejahatan Cyber Crime : <br>
+                    <ol>
+                        <li>Memalsukan Akun Facebook Seseorang</li>
+                        <li>Fenomena Ransomware WannaCry</li>
+                        <li>Doxxing dan Cyberbullying</li>
+                    </ol>
+                    Cara Penanggulangan Cyber Crime : <br>
+                    <ol>
+                        <li>Membuat Undang-Undang</li>
+                        <li>Membentuk Lembaga Penanganan Khusus</li>
+                        <li>
+                            Rutin mengubah Password atau membuat autentikasi tambahan pada Akun
+                        </li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Mengerti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal5Label">5. Sebutkan dan jelaskan apa saja standar keamanan untuk
+                        aplikasi web, Email
+                        dan jaringan!
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    Standar keamanan untuk aplikasi web, Email, dan jaringan , yaitu :
+                    <br>
+                    Untuk Email ada 2, yaitu : <br>
+                    <ol>
+                        <li>
+                            PGP (Pretty Good Privacy) <br>
+                            PGP merupakan program komputer yang sering dipakai dalam proses kriptografi dan autentikasi
+                            pengiriman data komputer. PGP pertama diperkenalkan pada tahun 1991 oleh Philip Zimmermann
+                            untuk menyandikan data dalam pengiriman surat elektronik. Dalam proses penyandian data ini,
+                            PGP mengikuti standar RFC 4880.
+                        </li>
+                        <li>
+                            Privacy Enhanced E-mail (PEM) <br>
+                            PEM adalah adalah standar Internet yang menyediakan untuk pertukaran informasi yang aman
+                            dari surat elektronik. PEM mempekerjakan berbagai teknik kriptografi untuk memungkinkan
+                            kerahasiaan, otentikasi pengirim, dan integritas pesan.
+                        </li>
+                    </ol>
+                    Untuk Web ada, 3 yaitu :
+                    <ol>
+                        <li>SSL (Secure Sockets Layer) <br>
+                            Sebuah protokol yang dikembangkan oleh Netscape untuk komunikasi dokumen yang membutuhkan
+                            privasi melalui Internet. SSL menggunakan suatu sistem enkripsi yang menggunakan dua kunci
+                            untuk melakukan enkripsi data.
+                        </li>
+                        <li>
+                            IDS (Intrusion Detection System) <br>
+                            Intrusion Detection System digunakan untuk mendeteksi aktivitas yang mencurigakan dalam
+                            sebuah sistem atau jaringan. Intrusion adalah aktivitas tidak sah atau tidak diinginkan yang
+                            mengganggu konfidensialitas, integritas dan atau ketersediaan dari informasi yang terdapat
+                            di sebuah sistem.
+                        </li>
+                        <li>
+                            IPS (Intrusion Prevention System) <br>
+                            Intrusion Prevention System (IPS) adalah sebuah aplikasi yang bekerja untuk monitoring
+                            traffic jaringan, mendeteksi aktivitas yang mencurigakan, dan melakukan pencegahan dini
+                            terhadap intrusi atau kejadian yang dapat membuat jaringan menjadi berjalan tidak seperti
+                            sebagaimana mestinya.
+                        </li>
+                    </ol>
+                    Untuk Jaringan yaitu : <br>
+                    <ol>
+                        <li>
+                            Firewall <br>
+                            Sebagaimana layaknya suatu dinding, Firewall akan bertindak sebagai
+                            pelindung atau pembatas terhadap orang-orang yang tidak berhak untuk mengakses
+                            jaringan kita. Suatu jaringan yang terhubung ke Internet pasti memiliki IP address
+                            (alamat Internet) khusus untuk masing-masing komputer yang terhubung dalam
+                            jaringan tersebut. Apabila jaringan ini tidak terlindungi oleh tunnel atau firewall, IP
+                            address tadi akan dengan mudahnya dikenali atau dilacak oleh pihak-pihak yang
+                            tidak diinginkan. Akibatnya data yang terdapat dalam komputer yang terhubung ke
+                            jaringan tadi akan dapat dicuri atau diubah. Dengan adanya pelindung seperti
+                            firewall, hal ini bisa menyembunyikan (hide) address tadi sehingga tidak dapat
+                            dilacak oleh pihak-pihak yang tidak diinginkan.
+                        </li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Mengerti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal6Label">5. Apa yang anda ketahui tentang SET (Security Elektronic
+                        Transaction), jelaskan
+                        proses kerjanya, dan berikan contoh!
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    Secure Electronic Transaction (SET) adalah merupakan metode pembayaran elektronik yang terenkripsi
+                    dan merupakan teknologi yang dirancang khusus untuk transaksi yang menggunakan kartu kredit melalui
+                    internet. <br>
+                    Cara kerja dari penyediaan SET ini diantaranya adalah untuk menyediakan saluran komunikasi yang aman
+                    antara semua pihak yang terlibat dalam transaksi. Kemudian memberikan kepercayaan dengan menggunakan
+                    sertifikat keamanan digital. Yang terakhir adalah untuk memastikan informasi privasi tetap aman
+                    karena ini hanya tersedia pada pihak yang melakukan suatu transaksi kapan pun dan dimana pun. <br>
+                    Saat ini di Indonesia hampir semua e-commerce telah menggunakan metode pembayaran via kartu kredit
+                    yang juga telah terverifikasi. Pastikan Anda menggunakan kartu kredit Anda yang membutuhkan
+                    autentikasi via SMS untuk semakin mengamankan kartu kredit Anda.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Mengerti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Modal -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

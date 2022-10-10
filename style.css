@@ -1,0 +1,76 @@
+/* CSS index */
+
+body {
+    background-color: transparent;
+}
+
+#home {
+    background-image: url(assets/bg.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+.btn {
+    width: 40%;
+    height: 100%;
+}
+
+/* Akhir CSS index */
+
+/* Css List Tugas */
+
+#bagianTugas {
+    background-color: #9F8772;
+}
+
+.tugasModul a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: #EDE4E0;
+    border-radius: 20px;
+}
+
+.tugasModul a:hover {
+    background-color: #C8DBBE;
+    color: #372948;
+}
+
+
+.tugasModul h1 {
+    color: #EDE4E0;
+}
+
+/* Akhir Css List Tugas */
+/* Css Modul*/
+
+#modul1 {
+    background-color: #9F8772;
+}
+
+.tugasmodul1 button {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: #EDE4E0;
+    border-radius: 20px;
+    border-color: transparent;
+}
+
+.tugasmodul1 button:hover {
+    background-color: #C8DBBE;
+    border-color: transparent;
+    color: #372948;
+}
+
+
+
+
+.tugasmodul1 h1 {
+    color: #EDE4E0;
+}
+
+/* Akhir Css Modul */
